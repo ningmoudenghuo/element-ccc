@@ -125,7 +125,12 @@ export default class Node {
 
   onChildCheck() {
     const { children } = this;
-    const validChildren = children.filter(child => !child.isDisabled);
+    // const validChildren = children.filter(child => !child.isDisabled);
+    const validChildren = children;
+    /**
+     * ccc
+     * 此处注释了方法内容，因为validChildren的值如果为空则会导致父级没有状态，如果有禁止选的已选项会导致误判
+    */
     const checked = validChildren.length
       ? validChildren.every(child => child.checked)
       : false;

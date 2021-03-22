@@ -64,9 +64,12 @@
 
             if (!isLeaf) this.handleExpand();
             if (multiple) {
+              /**
+               *  ccc 原因： 回显后加载全选的node-panel展开时会清除已选择项
+               */
               // if leaf sync checked state, else clear checked state
-              const checked = isLeaf ? node.checked : false;
-              this.handleMultiCheckChange(checked);
+              // const checked = isLeaf ? node.checked : false;
+              // this.handleMultiCheckChange(checked);
             }
           });
         } else {

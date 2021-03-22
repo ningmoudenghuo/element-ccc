@@ -620,12 +620,16 @@
       },
 
       deletePrevTag(e) {
-        if (e.target.value.length <= 0 && !this.toggleLastOptionHitState()) {
-          const value = this.value.slice();
-          value.pop();
-          this.$emit('input', value);
-          this.emitChange(value);
-        }
+        // if (e.target.value.length <= 0 && !this.toggleLastOptionHitState() && ) {
+        //   const value = this.value.slice();
+        //   value.pop();
+        //   this.$emit('input', value);
+        //   this.emitChange(value);
+        // }
+        /**
+         * ccc
+         * 此处注释了方法内容，为了多选的时候不能够通过delet键来清除已选择的tag
+         */
       },
 
       managePlaceholder() {
