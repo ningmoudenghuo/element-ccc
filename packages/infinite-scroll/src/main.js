@@ -4,10 +4,10 @@ import {
   isFunction,
   isUndefined,
   isDefined
-} from 'element-ui/src/utils/types';
+} from 'element-ccc/src/utils/types';
 import {
   getScrollContainer
-} from 'element-ui/src/utils/dom';
+} from 'element-ccc/src/utils/dom';
 
 const getStyleComputedProperty = (element, property) => {
   if (element === window) {
